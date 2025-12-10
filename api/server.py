@@ -31,54 +31,65 @@ def docs():
 @app.route('/api/status/exploits')
 def getallexploits():
     try:
-        response = requests.get('https://weao.xyz/api/status/exploits', headers={
+        resp = requests.get('https://weao.xyz/api/status/exploits', headers={
             'User-Agent': 'WEAO-3PService',
             'Accept': 'application/json'
         })        
-        if not response.ok:
-            return jsonify({'error': f'http nigger, status: {response.status_code}'}), response.status_code
-        return jsonify(response.json())
+        if not resp.ok:
+            return jsonify({'error': f'http nigger, status: {resp.status_code}'}), resp.status_code
+        return jsonify(resp.json())
     except Exception as error:
         return jsonify({'error': str(error) or 'error getting data'}), 500
 
 @app.route('/api/status/exploits/<exploit>')
 def getexploitstatus(exploit):
     try:
-        response = requests.get(f'https://weao.xyz/api/status/exploits/{quote(exploit)}', headers={
+        resp = requests.get(f'https://weao.xyz/api/status/exploits/{quote(exploit)}', headers={
             'User-Agent': 'WEAO-3PService',
             'Accept': 'application/json'
-        })
-        
-        if not response.ok:
-            return jsonify({'error': f'http nigger, status: {response.status_code}'}), response.status_code
-        
-        return jsonify(response.json())
+        })        
+        if not resp.ok:
+            return jsonify({'error': f'http nigger, status: {resp.status_code}'}), resp.status_code
+        return jsonify(resp.json())
     except Exception as error:
         return jsonify({'error': str(error) or 'error getting data'}), 500
 
 @app.route('/api/versions/current')
 def getcurrentversion():
     try:
-        response = requests.get('https://weao.xyz/api/versions/current', headers={
+        resp = requests.get('https://weao.xyz/api/versions/current', headers={
             'User-Agent': 'WEAO-3PService',
             'Accept': 'application/json'
         })        
-        if not response.ok:
-            return jsonify({'error': f'http nigger, status: {response.status_code}'}), response.status_code
-        return jsonify(response.json())
+        if not resp.ok:
+            return jsonify({'error': f'http nigger, status: {resp.status_code}'}), resp.status_code
+        return jsonify(resp.json())
     except Exception as error:
         return jsonify({'error': str(error) or 'error getting data'}), 500
+    
+@app.route('/api/versions/past')
+def getpastversion():
+    try:
+        resp = requests.get('https://weao.xyz/api/versions/past', headers={
+            'User-Agent': 'WEAO-3PService',
+            'Accept': 'application/json'
+        })        
+        if not resp.ok:
+            return jsonify({'error': f'http nigger, status: {resp.status_code}'}), resp.status_code
+        return jsonify(resp.json())
+    except Exception as error:
+        return jsonify({'error': str(error) or 'error getting data'}), 500    
     
 @app.route('/api/versions/future')
 def getfutureversion():
     try:
-        response = requests.get('https://weao.xyz/api/versions/future', headers={
+        resp = requests.get('https://weao.xyz/api/versions/future', headers={
             'User-Agent': 'WEAO-3PService',
             'Accept': 'application/json'
         })        
-        if not response.ok:
-            return jsonify({'error': f'http nigger, status: {response.status_code}'}), response.status_code
-        return jsonify(response.json())
+        if not resp.ok:
+            return jsonify({'error': f'http nigger, status: {resp.status_code}'}), resp.status_code
+        return jsonify(resp.json())
     except Exception as error:
         return jsonify({'error': str(error) or 'error getting data'}), 500    
 
