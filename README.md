@@ -3,6 +3,7 @@
 ### updates
 
 - back up (12/10/25)
+- added /api/versions/past (12/10/25)
 
 ### usage
 
