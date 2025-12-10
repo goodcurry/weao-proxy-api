@@ -8,10 +8,10 @@ When I was developing a simple template website using the Whatexpsare.online API
 
 To use the proxy server, send your requests to these endpoints:
 
-- Fetch current Roblox versions: `http://farts.fadedis.xyz:25505/api/versions/current`
-- Fetch future Roblox versions: `http://farts.fadedis.xyz:25505/api/versions/future`
-- Fetch all exploit statuses: `http://farts.fadedis.xyz:25505/api/status/exploits`
-- Fetch a specific exploit status: `http://farts.fadedis.xyz:25505/api/status/exploits/[exploit]` (Replace `[exploit]` with the name of the executor. Example: `solara`)
+- Fetch current Roblox versions: `http://farts.fadedis.xyz:25551/api/versions/current`
+- Fetch future Roblox versions: `http://farts.fadedis.xyz:25551/api/versions/future`
+- Fetch all exploit statuses: `http://farts.fadedis.xyz:25551/api/status/exploits`
+- Fetch a specific exploit status: `http://farts.fadedis.xyz:25551/api/status/exploits/[exploit]` (Replace `[exploit]` with the name of the executor. Example: `solara`)
 
 These endpoints will accept your requests to the [weao.xyz](https://weao.xyz/) API with the correct User-Agent headers and return the response.
 WEAO Documentation: [WEAO Documentation](https://docs.weao.xyz/)
